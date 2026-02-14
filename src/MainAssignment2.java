@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class MainAssignment2 {
     //Ansi color -> output
@@ -218,48 +219,106 @@ public class MainAssignment2 {
             return results.toString();
         }
     }
-    //Exercises in copy and pasting haha!
+    //Exercise 1-6 ✅
     public static void exercise1() {
         System.out.println("\n📘 EXERCISE 1");
-        System.out.println("Description: [Add description here]");
+        System.out.println("Description: [Using if-else Statements in Java]");
+
+        Random num = new Random();
+        int time = num.nextInt(6) + 13;
+        System.out.println("The random int between 13 and 18 inclusive is: " + time);
         System.out.println("Output:");
-        // TODO: Add your exercise 1 code here
-        System.out.println("Sample output for exercise 1");
+
+        if (time <= 11) {
+            System.out.println("Good Morning!");
+        } else {
+            System.out.println("Good Afternoon!");
+        }
     }
     public static void exercise2() {
         System.out.println("\n📘 EXERCISE 2");
-        System.out.println("Description: [Add description here]");
+        System.out.println("Description: [Enhancing if-else with else-if in Java]");
+
+        Random num = new Random();
+        int time = num.nextInt(23) + 0;
+        System.out.println("The random int between 0 and 23 inclusive is: " + time);
         System.out.println("Output:");
-        // TODO: Add your exercise 2 code here
-        System.out.println("Sample output for exercise 2");
+
+        if (time <= 11) {
+            System.out.println("Good Morning!");
+        } else if (time <= 17){
+            System.out.println("Good Afternoon!");
+        } else {
+            System.out.println("Good Evening");
+        }
     }
     public static void exercise3() {
-        System.out.println("\n📘 EXERCISE 3");
-        System.out.println("Description: [Add description here]");
-        System.out.println("Output:");
-        // TODO: Add your exercise 3 code here
+        System.out.println("\n\uD83D\uDCC6 EXERCISE 3 \uD83D\uDCC6");
+        System.out.println("Description: [Using JDK 25 arrow switch/yield construct]");
         System.out.println("Sample output for exercise 3");
+        System.out.println();
+
+        Scanner scanner = new Scanner(System.in);
+
+        //TODO how about an array of days???
+
+        System.out.println("Enter day number (1-7) for Mon-Sun");
+        int dayNumber = scanner.nextInt();
+        String dayName = switch (dayNumber) {
+            case  1 -> "Monday";
+            case  2 -> "Tuesday";
+            case  3 -> "Wednesday";
+            case  4 -> "Thursday";
+            case  5 -> "Friday";
+            case  6 -> "Saturday";
+            case  7 -> "Sunday";
+            default -> {
+                System.out.println("Invalid day number.");
+                yield "Unknown";
+            }
+        };
+        if (!dayName.equals("Unknown")) {
+            System.out.println("Day " + dayNumber + " is " + dayName);
+        }
     }
     public static void exercise4() {
         System.out.println("\n📘 EXERCISE 4");
-        System.out.println("Description: [Add description here]");
-        System.out.println("Output:");
-        // TODO: Add your exercise 4 code here
+        System.out.println("Description: [Legacy switch -> case -> break -> default construct]");
         System.out.println("Sample output for exercise 4");
+        int day = 2;
+
+        switch (day) {
+            case 6:
+                System.out.println("Today is Saturday");
+                break;
+            case 7:
+                System.out.println("Today is Sunday");
+                break;
+            default:
+                System.out.println("Looking forward to the weekend! 🚤");
+        }
     }
     public static void exercise5() {
-        System.out.println("\n📘 EXERCISE 5");
-        System.out.println("Description: [Add description here]");
-        System.out.println("Output:");
-        // TODO: Add your exercise 5 code here
+        System.out.println("\n🎢 EXERCISE 5🎢 ");
+        System.out.println("Description: [Using a while loop to Output Numbers in Java]");
         System.out.println("Sample output for exercise 5");
+
+        int i = 0;
+        while (i < 6) {
+            System.out.println(i);
+            i++;
+        }
     }
     public static void exercise6() {
         System.out.println("\n📘 EXERCISE 6");
-        System.out.println("Description: [Add description here]");
-        System.out.println("Output:");
-        // TODO: Add your exercise 6 code here
+        System.out.println("Description: [Use a for Loop to Print Even Numbers in Java]");
         System.out.println("Sample output for exercise 6");
+
+        int i = 2;
+        for (i = 2; i <= 10; i += 2) {
+            System.out.println(i + " is even Steven!");
+        }
+
     }
     public static void exercise7() {
         System.out.println("\n📘 EXERCISE 7");
