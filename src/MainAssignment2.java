@@ -40,7 +40,7 @@ public class MainAssignment2 {
         Menu menu = new Menu();
         menu.start();
         System.out.println(Color.GREEN + "\nThank you for using the program. Goodbye!" + Color.RESET);
-    }//end main
+    }
 
     static class Menu {
         private Scanner scanner;
@@ -80,125 +80,142 @@ public class MainAssignment2 {
         }
 
         private void processChoice(int choice) {
-            System.out.println("\n" + Color.YELLOW + "▶".repeat(40) + Color.RESET);
-            //TODO CHANGE TO -> JDK 25
-
-            switch (choice) {
-                case 1:
+            // Modified usage of switch/yield expression to get a message
+            String resultMessage = switch(choice) {
+                case 1 -> {
                     exercise1();
                     completed[1] = true;
-                    break;
-                case 2:
+                    yield Color.GREEN + "✓ Exercise 1 completed" + Color.RESET;
+                }
+                case 2 -> {
                     exercise2();
                     completed[2] = true;
-                    break;
-                case 3:
+                    yield Color.GREEN + "✓ Exercise 2 completed" + Color.RESET;
+                }
+                case 3 -> {
                     exercise3();
                     completed[3] = true;
-                    break;
-                case 4:
+                    yield Color.GREEN + "✓ Exercise 3 completed" + Color.RESET;
+                }
+                case 4 -> {
                     exercise4();
                     completed[4] = true;
-                    break;
-                case 5:
+                    yield Color.GREEN + "✓ Exercise 4 completed" + Color.RESET;
+                }
+                case 5 -> {
                     exercise5();
                     completed[5] = true;
-                    break;
-                case 6:
+                    yield Color.GREEN + "✓ Exercise 5 completed" + Color.RESET;
+                }
+                case 6 -> {
                     exercise6();
                     completed[6] = true;
-                    break;
-                case 7:
+                    yield Color.GREEN + "✓ Exercise 6 completed" + Color.RESET;
+                }
+                case 7 -> {
                     exercise7();
                     completed[7] = true;
-                    break;
-                case 8:
+                    yield Color.GREEN + "✓ Exercise 7 completed" + Color.RESET;
+                }
+                case 8 -> {
                     exercise8();
                     completed[8] = true;
-                    break;
-                case 9:
+                    yield Color.GREEN + "✓ Exercise 8 completed" + Color.RESET;
+                }
+                case 9 -> {
                     exercise9();
                     completed[9] = true;
-                    break;
-                case 10:
+                    yield Color.GREEN + "✓ Exercise 9 completed" + Color.RESET;
+                }
+                case 10 -> {
                     exercise10();
                     completed[10] = true;
-                    break;
-                case 11:
+                    yield Color.GREEN + "✓ Exercise 10 completed" + Color.RESET;
+                }
+                case 11 -> {
                     runAllExercises();
-                    // Mark all as completed
-                    for (int i = 1; i <= 10; i++) {
-                        completed[i] = true;
-                    }
-                    break;
-                case 12:
-                    System.out.println(Color.YELLOW + "Exiting program..." + Color.RESET);
-                    return;
-                default:
-                    System.out.println(Color.RED + "Invalid choice. Try again." + Color.RESET);
-                    return;
-            }
+                    for (int i = 1; i <= 10; i++) completed[i] = true;
+                    yield Color.PURPLE + "🔥 ALL EXERCISES COMPLETED! 🔥" + Color.RESET;
+                }
+                case 12 -> {
+                    yield Color.YELLOW + "Exiting program..." + Color.RESET;
+                }
+                default -> {
+                    yield Color.RED + "Invalid choice. Try again." + Color.RESET;
+                }
+            };
 
+            // Now we use the result message
+            System.out.println("\n" + Color.YELLOW + "▶".repeat(40) + Color.RESET);
+            System.out.println(resultMessage);
             System.out.println(Color.YELLOW + "◀".repeat(40) + Color.RESET);
 
-            if (choice != 12) {
+            if (choice != 12 && choice >= 1 && choice <= 11) {
                 System.out.print(Color.GREEN + "\nPress Enter to continue..." + Color.RESET);
                 scanner.nextLine(); // consume newline
                 scanner.nextLine(); // wait for Enter
             }
         }
-
-        private void runAllExercises() {
-            //Thank the Java stiff necks for copy/paste!
-            //TODO Add Exercise Code (the easy part!)..bold check box (more emojis)
-            //Color of out put and menu seems fine stage/commit/push - sleep 0358
-            //This 7hr task is an hour in Python and half the code...
-            //Feels like Visual Basic 3.0....
-            //This has to be ATROCIOUS CODE... look for a loop
-            System.out.println(Color.PURPLE + "\n🔥 RUNNING ALL EXERCISES 🔥" + Color.RESET);
-            System.out.println(Color.PURPLE + "=".repeat(50) + Color.RESET);
+        /*
+         IntelliJ Advice: Simple Rule
+         Few concatenations (2-3) is good
+         Many concatenations (StringBuilder with chained append()
+         */
+        private String runAllExercises() {
+            StringBuilder results = new StringBuilder();
+            results.append("\n");
 
             exercise1();
-            System.out.println(Color.GREEN + "✓ Exercise 1 complete" + Color.RESET);
-            System.out.println("-".repeat(30));
+            results.append(Color.GREEN)
+                    .append("✓ Exercise 1 complete\n")
+                    .append(Color.RESET);
 
             exercise2();
-            System.out.println(Color.GREEN + "✓ Exercise 2 complete" + Color.RESET);
-            System.out.println("-".repeat(30));
+            results.append(Color.GREEN)
+                    .append("✓ Exercise 2 complete\n")
+                    .append(Color.RESET);
 
             exercise3();
-            System.out.println(Color.GREEN + "✓ Exercise 3 complete" + Color.RESET);
-            System.out.println("-".repeat(30));
+            results.append(Color.GREEN)
+                    .append("✓ Exercise 3 complete\n")
+                    .append(Color.RESET);
 
             exercise4();
-            System.out.println(Color.GREEN + "✓ Exercise 4 complete" + Color.RESET);
-            System.out.println("-".repeat(30));
+            results.append(Color.GREEN)
+                    .append("✓ Exercise 4 complete\n")
+                    .append(Color.RESET);
 
             exercise5();
-            System.out.println(Color.GREEN + "✓ Exercise 5 complete" + Color.RESET);
-            System.out.println("-".repeat(30));
+            results.append(Color.GREEN)
+                    .append("✓ Exercise 5 complete\n")
+                    .append(Color.RESET);
 
             exercise6();
-            System.out.println(Color.GREEN + "✓ Exercise 6 complete" + Color.RESET);
-            System.out.println("-".repeat(30));
+            results.append(Color.GREEN)
+                    .append("✓ Exercise 6 complete\n")
+                    .append(Color.RESET);
 
             exercise7();
-            System.out.println(Color.GREEN + "✓ Exercise 7 complete" + Color.RESET);
-            System.out.println("-".repeat(30));
+            results.append(Color.GREEN)
+                    .append("✓ Exercise 7 complete\n")
+                    .append(Color.RESET);
 
             exercise8();
-            System.out.println(Color.GREEN + "✓ Exercise 8 complete" + Color.RESET);
-            System.out.println("-".repeat(30));
+            results.append(Color.GREEN)
+                    .append("✓ Exercise 8 complete\n")
+                    .append(Color.RESET);
 
             exercise9();
-            System.out.println(Color.GREEN + "✓ Exercise 9 complete" + Color.RESET);
-            System.out.println("-".repeat(30));
+            results.append(Color.GREEN)
+                    .append("✓ Exercise 9 complete\n")
+                    .append(Color.RESET);
 
             exercise10();
-            System.out.println(Color.GREEN + "✓ Exercise 10 complete" + Color.RESET);
+            results.append(Color.GREEN)
+                    .append("✓ Exercise 10 complete\n")
+                    .append(Color.RESET);
 
-            System.out.println(Color.PURPLE + "=".repeat(50) + Color.RESET);
-            System.out.println(Color.PURPLE + "✅ ALL EXERCISES COMPLETED SUCCESSFULLY" + Color.RESET);
+            return results.toString();
         }
     }
     //Exercises in copy and pasting haha!
@@ -271,17 +288,5 @@ public class MainAssignment2 {
         System.out.println("Output:");
         // TODO: Add your exercise 10 code here
         System.out.println("Sample output for exercise 10");
-    }//logic looks good
-
-    /*static void main(String[] args) {
-        Random num = new Random();
-        int time = num.nextInt(6) + 13;
-        System.out.println("Random time between 13 and 18 inclusive: " + time ); //random num check
-
-        if (time <= 11) {
-            System.out.println("Good Morning!");
-        } else {
-            System.out.println("Good Afternoon!");
-        }//end if else
-    }//end main*/
+    }
 }
