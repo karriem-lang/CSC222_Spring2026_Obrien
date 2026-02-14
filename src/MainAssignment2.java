@@ -18,6 +18,11 @@ public class MainAssignment2 {
             this.code = code;
         }
 
+        /* I doubt @Override is most Java-nic but works for me...even though IDE is complaining...
+        "Java Enums: When Constants Need Behavior" by Ahmet Emre Demirsen
+        Medium: Feb 2, 2026
+        https://medium.com/but-it-works-on-my-machine/java-enums-when-constants-need-behavior-124ef6c414db
+         */
         @Override
         public String toString() {
             return code;
