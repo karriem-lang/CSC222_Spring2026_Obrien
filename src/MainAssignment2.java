@@ -1,9 +1,21 @@
+/**
+ * CSC222 Assignment #2 - Interactive Exercise Menu
+ * Prof. D. O'Brien
+ * 14Feb2026 Time - 19:40
+ *
+ * This program presents an interactive menu system for 10 Java exercises,
+ * demonstrating control flow, loops, arrays, and modern Java features.
+ *
+ * @author [Karriem Lang]
+ * @version 1.0
+ */
+
 import java.util.Scanner;
 import java.util.Random;
 
 public class MainAssignment2 {
     //Ansi color -> output
-    //UGLY -> CLUNKY -> JAVONIC -> 3:30am tried everything in the Java Bible without success!
+    //UGLY -> CLUNKY -> Javanic -> 3:30am tried everything in the Java Bible without success!
     // an 'enum' and MILLION 'Color' prefixes for a little color!! PaPa can have this language!
     public enum Color {
         RESET("\u001B[0m"),
@@ -379,5 +391,21 @@ public class MainAssignment2 {
             }
             IO.println();
         }
+        /* =====================================================
+   FUTURE IMPROVEMENTS (Version 2.0)
+   =====================================================
+
+   [ ] Input validation - handle non-integer inputs gracefully
+   [ ] Add try-catch blocks for Scanner exceptions
+   [ ] Save completed exercises to file (progress persistence)
+   [ ] Add timer to track how long each exercise takes
+   [ ] Create Exercise interface for cleaner exercise management
+   [ ] Add option to repeat last exercise
+   [ ] Implement difficulty levels (Easy/Medium/Hard)
+   [ ] Add score tracking and summary report
+   [ ] Create unit tests for each exercise
+   [ ] Add configuration file for customizing colors/messages
+
+   ===================================================== */
     }
 }
