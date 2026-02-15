@@ -394,17 +394,10 @@ public class MainAssignment2 {
         /* =====================================================
    FUTURE IMPROVEMENTS (Version 2.0)
    =====================================================
-
-   [ ] Input validation - handle non-integer inputs gracefully
-   [ ] Add try-catch blocks for Scanner exceptions
-   [ ] Save completed exercises to file (progress persistence)
-   [ ] Add timer to track how long each exercise takes
+   [ ] Scanner exceptions/validation
    [ ] Create Exercise interface for cleaner exercise management
-   [ ] Add option to repeat last exercise
-   [ ] Implement difficulty levels (Easy/Medium/Hard)
-   [ ] Add score tracking and summary report
-   [ ] Create unit tests for each exercise
-   [ ] Add configuration file for customizing colors/messages
+   [ ] Unit tests
+   [ ] Add config file for colors/messages
 
    ===================================================== */
     }
