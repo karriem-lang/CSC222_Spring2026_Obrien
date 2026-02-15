@@ -3,4 +3,5 @@
 
 Student: Karriem Lang
 
-This project demonstrates if-else construct.
+This program presents an interactive menu system for 10 Java exercises,
+demonstrating control flow, loops, arrays, and modern Java features.
