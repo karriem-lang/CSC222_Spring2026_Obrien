@@ -322,30 +322,62 @@ public class MainAssignment2 {
     }
     public static void exercise7() {
         System.out.println("\n📘 EXERCISE 7");
-        System.out.println("Description: [Add description here]");
-        System.out.println("Output:");
-        // TODO: Add your exercise 7 code here
+        System.out.println("Description: [Using break to exit a for loop in Java]");
         System.out.println("Sample output for exercise 7");
+
+        int i = 0;
+        for (i = 0; i < 10; i++) {
+            System.out.println("control variable i: = " + i);
+            if (i == 4) { //When condition is met -> control variable (i == 4) loop graciously ends.
+                System.out.println("Good bye, i am now 4 - get it!!!");
+                break;
+            }
+        }
     }
     public static void exercise8() {
         System.out.println("\n📘 EXERCISE 8");
-        System.out.println("Description: [Add description here]");
-        System.out.println("Output:");
-        // TODO: Add your exercise 8 code here
+        System.out.println("Description: [Using continue to skip iterations in Java]");
         System.out.println("Sample output for exercise 8");
+
+        int i = 0;
+        for (i = 0; i < 10; i++) {
+            if ( i == 4) {
+                System.out.println("When i see 'continue' i jump over " + i + " ! and keep on trucking!");
+                continue;
+            }
+            System.out.println(i);
+        }
+
     }
     public static void exercise9() {
         System.out.println("\n📘 EXERCISE 9");
-        System.out.println("Description: [Add description here]");
-        System.out.println("Output:");
-        // TODO: Add your exercise 9 code here
+        System.out.println("Description: [Looping Through an array in Java]");
         System.out.println("Sample output for exercise 9");
+
+        int i = 0;
+
+        String [] cars = {"Volvo", "BMW", "Honda", "Toyota"};
+        for (i = 0; i < cars.length; i++) {
+            IO.println(cars[i]); //Tired of IntelliJ crying... -> JDK 25
+        }
     }
     public static void exercise10() {
         System.out.println("\n📘 EXERCISE 10");
-        System.out.println("Description: [Add description here]");
-        System.out.println("Output:");
-        // TODO: Add your exercise 10 code here
+        System.out.println("Description: [Nested Loops in Java]");
         System.out.println("Sample output for exercise 10");
+        IO.println();
+
+        //Much cleaner and Javanic Spec with -> 2 For Loops...
+        int i = 1;
+        for (i = 1; i <= 3; i++) {
+            IO.println("Iteration " + i + " of the for loop...");
+
+            int j = 1; //Must be placed inside For Loop in order to RESET...(Python)
+            while (j <= 5) {
+                IO.println("Inside the while loop: " + j);
+                j++;
+            }
+            IO.println();
+        }
     }
 }
