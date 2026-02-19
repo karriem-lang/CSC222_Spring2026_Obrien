@@ -163,8 +163,6 @@ public class Student {
         // Ready to test... and put the kids to sleep!
         scanner.close();
         System.out.println("\n✨ Program complete. Goodbye! ✨");
-        // CSC222_Spring2026_Obrien/src/Student.java
-
         }
     }
 
