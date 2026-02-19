@@ -41,5 +41,48 @@ DONE
 
 public class Student {
 
-    
-}
+    // PRIVATE! Outside Access Denied! -> A.K.A -> Encapsulation
+    private String firstName;
+    private String lastName;
+    private double gpa;
+
+    // CONSTRUCTOR -> @param firstName @param lastName @param gpa
+    public Student(String firstName, String lastName, double gpa) {
+        // this -> THIS object's var
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+        // setter validation
+        setGPA(gpa);
+    }
+
+    // GETTER METHODS -> return private values
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    public double getGPA() {
+        return this.gpa;
+    }
+
+    // SETTER METHOD
+    public void setGPA(double gpa) {
+        if (gpa < 0 || gpa > 4.0) {
+            this.gpa = 0.0; // validation requirement for out of bound numbers...
+        } else {
+            this.gpa = gpa;
+        }
+    }
+
+    public String toString() {
+            String formattedGPA = String.format("%.2f", this.gpa);
+            return this.firstName + " " + this.lastName + " (GPA: " + formattedGPA + ")";
+        }
+        // I Think this MAIN would be better in a separate file !?!?
+
+    }
+
