@@ -36,13 +36,13 @@ This program is a **Task Organizer** built in Java that allows users to manage
 - Well-formatted output for readability
 
 ## 🏗️  Classes 🏗️
-| Class | Description |
-|-------|-------------|
-| `Task` | Base class with common attributes (name, duration, priority) and methods |
-| `SchoolTask` | Derived class for school-related tasks (meetings, deadlines) |
-| `HomeTask` | Derived class for home-related tasks (tools required) |
-| `TaskOrganizer` | Main program that runs user input and task management |
-
+| Class           | Description                                                              |
+|-----------------|--------------------------------------------------------------------------|
+| `Task`          | Base class with common attributes (name, duration, priority) and methods |
+| `SchoolTask`    | Derived class for school-related tasks (meetings, deadlines)             |
+| `HomeTask`      | Derived class for home-related tasks (tools required)                    |
+| `TaskOrganizer` | Main program that runs user input and task management                    |
+| `Celebrate`     | Bonus! The Thrill of Victory! -> 'CSS and Java Rocks'                     |
 
 ## 🚀 Quick Start
 Compile all Java files:
