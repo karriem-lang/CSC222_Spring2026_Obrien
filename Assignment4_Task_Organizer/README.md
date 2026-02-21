@@ -56,7 +56,7 @@ java Assignment4_Task_Organizer/src/TaskOrganizer
 ### Installation & Running
 
 ## 💻  Example Output
-
+```
 Task: Complete project report
 Duration: 3.50 hours
 Priority Level: high
@@ -70,6 +70,7 @@ Tools Required: Broom, vacuum cleaner
 
 Total combined hours spent on tasks: 5.50
 School tasks had the highest total duration: 3.50 hours
+```
 
 ## 🔮 Future Enhancements
 // TODO
