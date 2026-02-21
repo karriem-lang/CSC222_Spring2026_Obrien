@@ -25,7 +25,7 @@ public class HomeTask extends Task {
     permissible do to the omission of 'private/final' in -> public void printInfo()
     super() runs base version first then adds HomeTask specific extension -> toolsRequired
     */
-    @Override
+    @Override // method override -> Polymorphism
     public void printInfo() {
         super.printInfo(); // Parent class -> Task
         System.out.println("Tools Required: " + toolsRequired);
