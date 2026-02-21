@@ -14,7 +14,7 @@ public class Celebration {
         };
         String reset = "\u001B[0m";
 
-        for (int i = 0; i < 10; i++) { // 10 cycles
+        for (int i = 0; i < 3; i++) { // 10 cycles
             for (String color : colors) {
                 System.out.print("\r" + color + message + reset);
                 Thread.sleep(200); // 200ms delay
