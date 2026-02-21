@@ -12,13 +12,13 @@ public class SchoolTask extends Task {
 
     // Constructor calls the base class constructor -> see Constructor comment in {HomeTask}
     public SchoolTask(String name, double duration, String priorityLevel, int meetingCount, String deadline) {
-        super(name, duration, priorityLevel); 
+        super(name, duration, priorityLevel);
         this.meetingCount = meetingCount;
         this.deadline = deadline;
     }
 
     // Override printInfo to include school-specific details
-    @Override
+    @Override // Polymorphism -> same method name, different implementation!
     public void printInfo() {
         super.printInfo(); // print base task info
         System.out.println("Number of Meetings: " + meetingCount);
