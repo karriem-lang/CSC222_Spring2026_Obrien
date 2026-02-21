@@ -41,4 +41,3 @@ public class Task {
         System.out.println("Priority Level: " + priorityLevel);
     }
 }
-
